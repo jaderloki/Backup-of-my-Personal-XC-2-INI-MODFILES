@@ -1,0 +1,7 @@
+[WOTCSuppressionPlus.X2Ability_SuppressionPlus]
++DISABLE_FLANK_CRIT=true
++IGNOREVIS=true
++REACTION_PENALTY=false
++ALLOW_SUPPRESSION_CRIT=true
++SuppressionAbility=Suppression
++SuppressionShotAbility=SuppressionShot

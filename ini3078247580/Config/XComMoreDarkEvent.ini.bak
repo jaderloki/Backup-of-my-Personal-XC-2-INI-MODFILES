@@ -1,0 +1,30 @@
+[MoreDarkEvents.X2EventListener_MoreDarkEvents]
+
+;This mod allows the number of dark events to depend on current in game month, and on the current Doom (avatar pips).
+;for each of them some logic is applied, and then the numbers are combined.
+;For each of the numbers, you have two options: either specify explicitly the numbers, OR use a linear formula.
+;NOTE: 1) if you use explicit numbers, the formula is ignored. If you get to a point that's not covered by your explicit numbers - the last entry will be used.
+;NOTE: 2) Number of months counts "xcom 2 months" - i.e., supply drops, which normally are 21 days, and not 30 days.
+;for example, the following will just increase the number by 1 every month.
+
+;PerMonthFormulaSlope = 1.0
+;PerMonthFormulaConstantTerm = 0.0;
+
+;but to use it, you should nuke the array below. Since the array is specified, the formula is ignored. 
+PerMonthDarkEvent[0] = 1
+PerMonthDarkEvent[1] = 2
+PerMonthDarkEvent[2] = 3
+PerMonthDarkEvent[3] = 3
+PerMonthDarkEvent[4] = 4
+PerMonthDarkEvent[5] = 4
+PerMonthDarkEvent[6] = 5
+
+PerDoomFormulaSlope = 0.334
+PerDoomFormulaConstantTerm = 0
+;this will mean that for 0-2 avatar ticks - no DE are added, 3-5 - 1 is added, 6-8 - 2 are added, etc...
+;OR - you can specify your own logic with the array:
+;PerDoomDarkEvent[0] = 0
+
+;and you can set a maximum.
+MaxDarkEvents = 9999
+;...no meaninful maximum is set by default.

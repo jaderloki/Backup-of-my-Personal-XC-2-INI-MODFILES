@@ -1,0 +1,18 @@
+;A configuration File
+[CovertActionRisk_AmbushSitRep X2CovertActionRiskTemplate]
++MinChanceToOccur=50
++MaxChanceToOccur=75
+
+[CovertActionRisk_Advanced X2CovertActionRiskTemplate]
++MinChanceToOccur=50
++MaxChanceToOccur=75
+
+[CovertActionRisk_Phalanx X2CovertActionRiskTemplate]
++MinChanceToOccur=50
++MaxChanceToOccur=75
+
+[CovertActionRisk_Waves X2CovertActionRiskTemplate]
++MinChanceToOccur=50
++MaxChanceToOccur=75
+
+

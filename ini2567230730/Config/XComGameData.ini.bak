@@ -1,0 +1,528 @@
+[CovertInfiltration.X2Helper_Infiltration_TemplateMod]
+; Remove Faction Cards----------------------
+; Reaper Cards------------------------------
++arrRemoveFactionCard="ResCard_LightningStrike"
++arrRemoveFactionCard="ResCard_VolunteerArmy"
++arrRemoveFactionCard="ResCard_GuardianAngels"
+
+; Skirmisher Cards--------------------------
++arrRemoveFactionCard="ResCard_Vulture"
++arrRemoveFactionCard="ResCard_InformationWar"
++arrRemoveFactionCard="ResCard_TacticalAnalysis"
+
+; Templar Cards--------------------------
+; Currently broken, so removing until we can properly address it
+; See #684
++arrRemoveFactionCard="ResCard_GreaterResolve"
+
+LiveFireTrainingRanksIncrease=2
+
+; Uncomment the line below (or set it in another mod) if your PsiOps do not use the vanilla psi lab tube training mechanic
+;bPermitPsiOpInAcademy=True
+
+; Chosen sabotages to remove
++arrSabotagesToRemove="Sabotage_LongRangeComms"
+
+; Points of interest to remove
++arrPointsOfInterestToRemove="POI_Alloys"
++arrPointsOfInterestToRemove="POI_SupplyRaid"
++arrPointsOfInterestToRemove="POI_GuerillaOp"
++arrPointsOfInterestToRemove="POI_LootTable"
++arrPointsOfInterestToRemove="POI_HeavyWeapon"
++arrPointsOfInterestToRemove="POI_GrenadeAmmo"
+
+; Soldier promotion rewards will be removed from all covert actions except those in this array
++arrAllowPromotionReward="CovertAction_ExhaustiveTraining"
+
+; Force the xpack retal instead of vanilla one
+; xymanek - I want the first retal not to be so penalizing (first chosen is very hard)
++arrFirstRetalExcludedMissionFamilies="Terror"
+
+; Reduce by 20% compared to vanilla
+FacilityLeadResearchPointsToComplete=864
+FacilityLeadResearchRepeatPointsIncrease=1664
+
+[XComGame.XComGameState_MissionCalendar]
+-MissionDecks[0]=(DeckName="StartMissions", NextDeckName="MidMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(MissionSource="MissionSource_ResistanceOp"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(MissionSource="MissionSource_SupplyRaid"),         Missions[5]=(MissionSource="MissionSource_ResistanceOp"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(MissionSource="MissionSource_Retaliation"),         Missions[8]=(MissionSource="Blank"))
+-MissionDecks[1]=(DeckName="MidMissions", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(MissionSource="MissionSource_SupplyRaid"),         Missions[2]=(MissionSource="MissionSource_Council"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(MissionSource="MissionSource_Retaliation"),         Missions[5]=(RandomDeckName="RandomMissions"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(RandomDeckName="RandomMissions"),         Missions[8]=(RandomDeckName="RandomMissions"))
+-MissionDecks[2]=(DeckName="LateMissions", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(RandomDeckName="LateRandomMissions"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(RandomDeckName="LateRandomMissions"),         Missions[5]=(RandomDeckName="LateRandomMissions"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(RandomDeckName="LateRandomMissions"),         Missions[8]=(RandomDeckName="LateRandomMissions"))
+-MissionDecks[3]=(DeckName="EndGameMissions", NextDeckName="EndGameMissions", MissionMonthDays=30, bForceNoConsecutive=true,        Missions[0]=(MissionSource="MissionSource_GuerillaOp"),        Missions[1]=(MissionSource="Blank"),        Missions[2]=(MissionSource="MissionSource_SupplyRaid"),        Missions[3]=(MissionSource="Blank"))
+-MissionDecks[4]=(DeckName="StartMissionsLegend", NextDeckName="MidMissionsLegend1", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(MissionSource="MissionSource_ResistanceOp"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(MissionSource="MissionSource_SupplyRaid"),         Missions[5]=(MissionSource="MissionSource_ResistanceOp"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(MissionSource="MissionSource_Retaliation"),         Missions[8]=(MissionSource="Blank"))
+-MissionDecks[5]=(DeckName="MidMissionsLegend1", NextDeckName="MidMissionsLegend2", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(MissionSource="MissionSource_SupplyRaid"),         Missions[2]=(MissionSource="MissionSource_Council"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(MissionSource="MissionSource_Retaliation"),         Missions[5]=(RandomDeckName="RandomMissions"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(RandomDeckName="RandomMissions"),         Missions[8]=(RandomDeckName="RandomMissions"))
+-MissionDecks[6]=(DeckName="MidMissionsLegend2", NextDeckName="MidMissionsLegend3", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(RandomDeckName="RandomMissions"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(RandomDeckName="RandomMissions"),         Missions[5]=(RandomDeckName="RandomMissions"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(RandomDeckName="RandomMissions"),         Missions[8]=(RandomDeckName="RandomMissions"))
+-MissionDecks[7]=(DeckName="MidMissionsLegend3", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="MissionSource_GuerillaOp"),         Missions[1]=(RandomDeckName="RandomMissions"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="MissionSource_GuerillaOp"),         Missions[4]=(RandomDeckName="RandomMissions"),         Missions[5]=(RandomDeckName="RandomMissions"),         Missions[6]=(MissionSource="MissionSource_GuerillaOp"),         Missions[7]=(RandomDeckName="RandomMissions"),         Missions[8]=(RandomDeckName="RandomMissions"))
+
++MissionDecks[0]=(DeckName="StartMissions", NextDeckName="MidMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="Blank"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="MissionSource_Retaliation"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[1]=(DeckName="MidMissions", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="Blank"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="MissionSource_Retaliation"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="Blank"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[2]=(DeckName="LateMissions", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="Blank"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="Blank"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[3]=(DeckName="EndGameMissions", NextDeckName="EndGameMissions", MissionMonthDays=30, bForceNoConsecutive=true,        Missions[0]=(MissionSource="Blank"),        Missions[1]=(MissionSource="Blank"),        Missions[2]=(MissionSource="Blank"),        Missions[3]=(MissionSource="Blank"))
++MissionDecks[4]=(DeckName="StartMissionsLegend", NextDeckName="MidMissionsLegend1", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="Blank"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="MissionSource_Retaliation"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[5]=(DeckName="MidMissionsLegend1", NextDeckName="MidMissionsLegend2", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="Blank"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="MissionSource_Retaliation"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="Blank"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[6]=(DeckName="MidMissionsLegend2", NextDeckName="MidMissionsLegend3", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="Blank"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="Blank"),         Missions[8]=(MissionSource="Blank"))
++MissionDecks[7]=(DeckName="MidMissionsLegend3", NextDeckName="LateMissions", MissionMonthDays=65, bForceNoConsecutive=true,         Missions[0]=(MissionSource="Blank"),         Missions[1]=(MissionSource="Blank"),         Missions[2]=(MissionSource="MissionSource_Retaliation"),         Missions[3]=(MissionSource="Blank"),         Missions[4]=(MissionSource="Blank"),         Missions[5]=(MissionSource="Blank"),         Missions[6]=(MissionSource="Blank"),         Missions[7]=(MissionSource="Blank"),         Missions[8]=(MissionSource="Blank"))
+
+; Greetings, Adventurer!
+; 
+; Beyond this point lies The Valley Of The Squad Sizes.
+; Many tales have been told about the secrets that are hidden there.
+; Some speak of great treasures that one can find.
+; Others of the excitment the one can reap.
+; Others of The Great Chaos that thirsts to upset The Balance of these lands.
+; You may find legends that speak of easy victories, yet make no mistake - these are just legends...
+; It is even said that The Great Coding Gods from above dare not come to The Valley since The Creation!
+;
+; What do you believe? Will you dare to venture forth?
+;
+; If you do, you must also know the other Anchors of The Balance:
+; The number of beds on your ship;
+; How many resources you scavenge along your path;
+; How many companions you start your journey together with;
+; How many companions you will gather along the way;
+; How much gear they will need;
+; How much their gear will slow them down;
+; How scary their gear will look to your enemies;
+; And lastly - their endurance.
+;
+; Before you go, remember - those that choose to visit this sacred place will have their story forever altered - a new journey awaits.
+
+; Infiltration missions
+[CovertInfiltration.X2StrategyElement_InfiltrationActions]
+InfiltrationMaxSquadSize=6
+
+; Assault missions
+[XComGame.X2StrategyGameRulesetDataStructures]
+m_iMaxSoldiersOnMission=6
+
+-RiskThresholds[0]=33
+-RiskThresholds[1]=66
+-RiskThresholds[2]=100
+
++RiskThresholds[0]=0
++RiskThresholds[1]=20
++RiskThresholds[2]=40
++RiskThresholds[3]=60
++RiskThresholds[4]=80
++RiskThresholds[5]=100
+
+[XComGame.XComGameState_HeadquartersResistance]
+
+; Increase recruitment costs by 5 supplies (except on easy)
++RecruitSupplyCosts[0]=25 ;Easy
++RecruitSupplyCosts[1]=30 ;Normal
++RecruitSupplyCosts[2]=30 ;Classic
++RecruitSupplyCosts[3]=45 ;Impossible
+
+; Disable CA ambush safeguard
+CovertActionAmbushSafeguardDays=0
+
+; Chance to spawn another scanning site when there are less than 3 available
++AdditionalPOIChance[0]=100 ;Easy
++AdditionalPOIChance[1]=100 ;Normal
++AdditionalPOIChance[2]=100 ;Classic
++AdditionalPOIChance[3]=100 ;Impossible
+
+[XComGame.XComGameState_HeadquartersXCom]
+; Increase the amount of loot drops as we have more people to give things to now
+TimedLootPerMission=2
+
+[XComGame.X2SitRep_DefaultSitReps]
+; Removed
+-SitReps=Surgical
+-SitReps=LowProfile
+
+; Reenabling for the enviromental sitreps feature
+;-SitReps=ShowOfForce
+;-SitReps=PsionicStorm
+;-SitReps=Savage
+;-SitReps=AutomatedDefenses
+
+; The horde sitrep cannot appear on any missions randomly (not a risk and excluded from enviromental list)
+; However, some mission types require it so we need it to actually exist, or these mission break
+;-SitReps=TheHorde
+
+; Flat risks
++SitReps=ShoddyIntel
++SitReps=AdventAirPatrols
++SitReps=IntelligenceLeak
++SitReps=UpdatedFirewalls
+
+; Flat risks, FL+6
++SitReps=MessyInsertion
++SitReps=RestrictedAirspace
+
+; Flat risks, FL+11
++SitReps=Phalanx_CI
++SitReps=Congregation
++SitReps=ExperimentalRollout
+;+SitReps=GunneryEmplacements (not reliable)
+;+SitReps=AdventPatrols (X2SitRepEffect_ModifyPodSize is broken, does nothing)
+
+; T1 overinfil
++SitReps=WellRehearsed
++SitReps=CommsJamming
++SitReps=LightningStrike
+
+; T2 overinfil
++SitReps=Foxholes
++SitReps=MentalReadiness
++SitReps=VolunteerArmy
++SitReps=EquipmentCache
+
+; T3 overinfil
++SitReps=TacticalAnalysis
+; LocationScout
+; ShadowSquad
+
+; Overinfil generic bonuses
++SitReps=OpportuneMoment1
++SitReps=OpportuneMoment2
+
+[CovertInfiltration.X2Helper_Infiltration]
++ENVIROMENTAL_SITREPS_EXCLUDE=TheHorde
+
+[CovertInfiltration.X2EventListener_Infiltration]
+; How many dark events each month
+NumDarkEventsFirstMonth = 1
+NumDarkEventsSecondMonth = 2
+NumDarkEventsThirdMonth = 3
+; After the third month, it stays the same
+
+; Uncomment the next line if you want to allow squad-size-modifying sitreps on infiltration mission
+; WARNING: This will likely break things, as infiltrations were designed/implemented with a specific min/max soldier count in mind
+;ALLOW_SQUAD_SIZE_SITREPS_ON_INFILS=true
+
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="AdventAirPatrols", SitReps[1]="CommsJamming")
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="IntelligenceLeak", SitReps[1]="LightningStrike")
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="IntelligenceLeak", SitReps[1]="CommsJamming")
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="ShoddyIntel", SitReps[1]="WellRehearsed")
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="Phalanx_CI", SitReps[1]="Congregation")
++SITREPS_EXCLUSIVE_BUCKETS=(SitReps[0]="ExperimentalRollout", SitReps[1]="TheHorde")
+
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="LightningStrike")
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="AdventAirPatrols")
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="IntelligenceLeak")
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="ChosenRetaliation", SitRep="GunneryEmplacements")
++SITREPS_MISSION_BLACKLIST=(MissionFamily="SupplyLineRaid", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionFamily="SupplyLineRaid", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="SupplyExtraction", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="SupplyExtraction", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="SupplyExtraction", SitRep="AdventAirPatrols")
++SITREPS_MISSION_BLACKLIST=(MissionType="SupplyExtraction", SitRep="CommsJamming")
++SITREPS_MISSION_BLACKLIST=(MissionType="ProtectDevice", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="ProtectDevice", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="SecureUFO", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="SecureUFO", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="SwarmDefense", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="SwarmDefense", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="SwarmDefense", SitRep="CommsJamming")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="AdventAirPatrols")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="AdventPatrols")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="UpdatedFirewalls")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="GunneryEmplacements")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="Phalanx_CI")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="Congregation")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="CommsJamming")
++SITREPS_MISSION_BLACKLIST=(MissionType="RecoverExpedition", SitRep="TheLost")
++SITREPS_MISSION_BLACKLIST=(MissionType="GatherSurvivors", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="GatherSurvivors", SitRep="WellRehearsed")
++SITREPS_MISSION_BLACKLIST=(MissionType="GatherSurvivors", SitRep="GunneryEmplacements")
++SITREPS_MISSION_BLACKLIST=(MissionType="ExtractVIP", SitRep="LightningStrike")
++SITREPS_MISSION_BLACKLIST=(MissionType="SabotageCC", SitRep="ShoddyIntel")
++SITREPS_MISSION_BLACKLIST=(MissionType="SabotageCC", SitRep="WellRehearsed")
+
+[MentalReadiness X2SitRepTemplate]
++TacticalGameplayTags=SITREP_PhysicalConditioning
++PositiveEffects=MentalReadinessEffect
+
+[LightningStrike X2SitRepTemplate]
++TacticalGameplayTags=SITREP_LightningStrike
++PositiveEffects=LightningStrikeEffect
+
+[AdventPatrols X2SitRepTemplate]
++TacticalGameplayTags=SITREP_AdventPatrols
++NegativeEffects=PodSizeIncreaseByOneEffect
++bNegativeEffect=true
+
+[GunneryEmplacements X2SitRepTemplate]
++TacticalGameplayTags=SITREP_GunneryEmplacements
++NegativeEffects=GunneryEmplacementsEffect
++bNegativeEffect=true
+
+[Phalanx_CI X2SitRepTemplate]
++TacticalGameplayTags=SITREP_Phalanx_CI
++NegativeEffects=PhalanxEffect_CI
++bNegativeEffect=true
++MinimumForceLevel=11
+
+[Congregation X2SitRepTemplate]
++TacticalGameplayTags=SITREP_Congregation
++NegativeEffects=CongregationEffect
++bNegativeEffect=true
++MinimumForceLevel=11
+
+[ShoddyIntel X2SitRepTemplate]
++TacticalGameplayTags=SITREP_ShoddyIntel
++NegativeEffects=ShoddyIntelEffect
++bNegativeEffect=true
+
+[WellRehearsed X2SitRepTemplate]
++TacticalGameplayTags=SITREP_WellRehearsed
++PositiveEffects=WellRehearsedEffect
+
+[VolunteerArmy X2SitRepTemplate]
++TacticalGameplayTags=SITREP_VolunteerArmy
++PositiveEffects=VolunteerArmyEffect
+
+[IntelligenceLeak X2SitRepTemplate]
++TacticalGameplayTags=SITREP_IntelligenceLeak
++NegativeEffects=NoSquadConcealmentEffect
++NegativeEffects=IntelligenceLeakDebuffEffect
++DisplayEffects=NoSquadConcealmentEffect
++DisplayEffects=IntelligenceLeakDebuffEffect
++bNegativeEffect=true
+
+[TacticalAnalysis X2SitRepTemplate]
++TacticalGameplayTags=SITREP_TacticalAnalysis
++PositiveEffects=TacticalAnalysisEffect
++PositiveEffects=TacticalAnalysisAbility
+
+[AdventAirPatrols X2SitRepTemplate]
++TacticalGameplayTags=SITREP_AdventAirPatrols
++bNegativeEffect=true
+
+[CommsJamming X2SitRepTemplate]
++TacticalGameplayTags=SITREP_CommsJamming
+
+[UpdatedFirewalls X2SitRepTemplate]
++TacticalGameplayTags=SITREP_UpdatedFirewalls
++NegativeEffects=UpdatedFirewallsBuffEffect
++NegativeEffects=UpdatedFirewallsEffect
+bNegativeEffect=true
++ValidMissionFamilies="Recover"
++ValidMissionFamilies="Hack"
++ValidMissionFamilies="DestroyObject"
++ValidMissionFamilies="ProtectDevice"
++ValidMissionFamilies="NeutralizeFieldCommander"
++ValidMissionFamilies="Extract"
++ValidMissionFamilies="Rescue"
++ValidMissionFamilies="Neutralize"
++ValidMissionFamilies="SabotageTransmitter"
+
+[Foxholes X2SitRepTemplate]
++TacticalGameplayTags=SITREP_Foxholes
++PositiveEffects=FoxholesBuffEffect
+
+[OpportuneMoment1 X2SitRepTemplate]
++TacticalGameplayTags=SITREP_OpportuneMoment1
++PositiveEffects=OpportuneMoment1Effect
+
+[OpportuneMoment2 X2SitRepTemplate]
++TacticalGameplayTags=SITREP_OpportuneMoment2
++PositiveEffects=OpportuneMoment2Effect
+
+[MessyInsertion X2SitRepTemplate]
++TacticalGameplayTags=SITREP_MessyInsertion
++NegativeEffects=MessyInsertionEffect
++bNegativeEffect=true
++MinimumForceLevel=6
+
+[RestrictedAirspace X2SitRepTemplate]
++TacticalGameplayTags=SITREP_RestrictedAirspace
++TacticalGameplayTags=CI_DisablePlaceEvac
++bNegativeEffect=true
++MinimumForceLevel=6
++ValidMissionFamilies="Recover"
++ValidMissionFamilies="Hack"
++ValidMissionFamilies="DestroyObject"
++ValidMissionFamilies="NeutralizeFieldCommander"
++ValidMissionFamilies="SabotageTransmitter"
+
+[ExperimentalRollout X2SitRepTemplate]
++TacticalGameplayTags=SITREP_ExperimentalRollout
++NegativeEffects=ExperimentalRolloutEffect
++bNegativeEffect=true
++MinimumForceLevel=11
+
+[EquipmentCache X2SitRepTemplate]
++TacticalGameplayTags=SITREP_EquipmentCache
++PositiveEffects=EquipmentCacheEffect
+
+[CovertInfiltration.X2SitRep_InfiltrationSitRepEffects]
+EmplaceFollower_AllowEncountersWithFollowerOverride=true
+
++PhalanxCharacterSelection=(CharacterTemplate="AdvShieldBearerM2", MinFL=8, MaxFL=13)
++PhalanxCharacterSelection=(CharacterTemplate="AdvShieldBearerM3", MinFL=14, MaxFL=20)
+
++CongregationCharacterSelection=(CharacterTemplate="AdvPriestM1", MinFL=3, MaxFL=7)
++CongregationCharacterSelection=(CharacterTemplate="AdvPriestM2", MinFL=8, MaxFL=13)
++CongregationCharacterSelection=(CharacterTemplate="AdvPriestM3", MinFL=14, MaxFL=20)
+
+MESSYINSERTION_WILLLOSS=0.2f
+MESSYINSERTION_HEALTHLOSS=0.25f
+
+[XComGame.XComGameState_AdventChosen]
+-AppearChances=(Difficulty=0, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=0, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=0, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=0, MissionCount=4, PercentChance=100)
+-AppearChances=(Difficulty=1, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=1, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=1, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=1, MissionCount=4, PercentChance=100)
+-AppearChances=(Difficulty=2, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=2, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=2, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=2, MissionCount=4, PercentChance=100)
+-AppearChances=(Difficulty=3, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=3, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=3, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=3, MissionCount=4, PercentChance=100)
+
++AppearChances=(Difficulty=0, MissionCount=1, PercentChance=25)
++AppearChances=(Difficulty=0, MissionCount=2, PercentChance=40)
++AppearChances=(Difficulty=0, MissionCount=3, PercentChance=67)
++AppearChances=(Difficulty=0, MissionCount=4, PercentChance=80)
++AppearChances=(Difficulty=0, MissionCount=5, PercentChance=100)
+
++AppearChances=(Difficulty=1, MissionCount=1, PercentChance=25)
++AppearChances=(Difficulty=1, MissionCount=2, PercentChance=40)
++AppearChances=(Difficulty=1, MissionCount=3, PercentChance=67)
++AppearChances=(Difficulty=1, MissionCount=4, PercentChance=80)
++AppearChances=(Difficulty=1, MissionCount=5, PercentChance=100)
+
++AppearChances=(Difficulty=2, MissionCount=1, PercentChance=25)
++AppearChances=(Difficulty=2, MissionCount=2, PercentChance=40)
++AppearChances=(Difficulty=2, MissionCount=3, PercentChance=67)
++AppearChances=(Difficulty=2, MissionCount=4, PercentChance=80)
++AppearChances=(Difficulty=2, MissionCount=5, PercentChance=100)
+
++AppearChances=(Difficulty=3, MissionCount=1, PercentChance=25)
++AppearChances=(Difficulty=3, MissionCount=2, PercentChance=40)
++AppearChances=(Difficulty=3, MissionCount=3, PercentChance=67)
++AppearChances=(Difficulty=3, MissionCount=4, PercentChance=80)
++AppearChances=(Difficulty=3, MissionCount=5, PercentChance=100)
+
+[XComGame.XComGameState_HeadquartersAlien]
+; Reduce from 3 (vanilla) to 1
+; The index is the number of alive chosen
+MinMissionsBetweenChosenAppearances[1]=1
+MinMissionsBetweenChosenAppearances[2]=1
+MinMissionsBetweenChosenAppearances[3]=1
+
+[XComGame.X2StrategyElement_XpackRewards]
+; Nerf the remove doom covert action
+
+RemoveDoomReward[0]=2 ;Easy
+RemoveDoomReward[1]=1 ;Normal
+RemoveDoomReward[2]=1 ;Classic
+RemoveDoomReward[3]=1 ;Impossible
+
+[CovertInfiltration.X2StrategyElement_InfiltrationRewards]
+
+SmallIntelRewardMin[0]=25 ;Easy
+SmallIntelRewardMin[1]=20 ;Normal
+SmallIntelRewardMin[2]=20 ;Classic
+SmallIntelRewardMin[3]=15 ;Impossible
+
+SmallIntelRewardMax[0]=35 ;Easy
+SmallIntelRewardMax[1]=30 ;Normal
+SmallIntelRewardMax[2]=30 ;Classic
+SmallIntelRewardMax[3]=25 ;Impossible
+
+SmallIncomeIncreaseRewardMin[0]=10 ;Easy
+SmallIncomeIncreaseRewardMin[1]=5 ;Normal
+SmallIncomeIncreaseRewardMin[2]=5 ;Classic
+SmallIncomeIncreaseRewardMin[3]=5 ;Impossible
+
+SmallIncomeIncreaseRewardMax[0]=15 ;Easy
+SmallIncomeIncreaseRewardMax[1]=15 ;Normal
+SmallIncomeIncreaseRewardMax[2]=15 ;Classic
+SmallIncomeIncreaseRewardMax[3]=10 ;Impossible
+
+FacilityDelayRewardMin[0]=10 ;Easy
+FacilityDelayRewardMin[1]=7 ;Normal
+FacilityDelayRewardMin[2]=7 ;Classic
+FacilityDelayRewardMin[3]=5 ;Impossible
+
+FacilityDelayRewardMax[0]=12 ;Easy
+FacilityDelayRewardMax[1]=10 ;Normal
+FacilityDelayRewardMax[2]=10 ;Classic
+FacilityDelayRewardMax[3]=7 ;Impossible
+
+ScanSitesRewardMin[0]=2 ;Easy
+ScanSitesRewardMin[1]=2 ;Normal
+ScanSitesRewardMin[2]=2 ;Classic
+ScanSitesRewardMin[3]=2 ;Impossible
+
+ScanSitesRewardMax[0]=3 ;Easy
+ScanSitesRewardMax[1]=3 ;Normal
+ScanSitesRewardMax[2]=3 ;Classic
+ScanSitesRewardMax[3]=3 ;Impossible
+
+[XComGame.XComGameState_Objective]
++AlwaysStartObjectives="CI_CompleteFirstRetal"
+
+[XComGame.XComStrategySoundManager]
+; Used in our custom tutorial popup in strategy
++SoundEventPaths=SoundTacticalUI.TacticalUI_Tutorial_Popup
+
+[XComGame.XComGameState_HeadquartersAlien]
+
+; Increase fortress doom interval by 15% - 20%
+MinFortressDoomInterval[0]=386 ;Easy
+MaxFortressDoomInterval[0]=403
+MinFortressDoomInterval[1]=386 ;Normal
+MaxFortressDoomInterval[1]=403
+MinFortressDoomInterval[2]=386 ;Classic
+MaxFortressDoomInterval[2]=403
+MinFortressDoomInterval[3]=386 ;Impossible
+MaxFortressDoomInterval[3]=403
+
+[XComGame.XComGameState_ResistanceFaction]
+; default in vanilla is 2/3/4
+CovertActionsPerInfluence[eFactionInfluence_Minimal]=3
+CovertActionsPerInfluence[eFactionInfluence_Respected]=3
+CovertActionsPerInfluence[eFactionInfluence_Influential]=4
+
+; Remove premium crates from supply extract
+[XComGame.SeqAct_GetGatherSuppliesChests]
+-ChestDistributions=(MinForceLevel=1,\\
+					MaxForceLevel=4,\\
+					ChestTypeShuffleBag[0]="Basic1", \\
+					RareChests[0]=(Type="RareCores", Chance=2.0), \\
+					RareChests[1]=(Type="RarePCS", Chance=2.0), \\
+					RareChests[2]=(Type="RareLoot", Chance=2.0), \\
+					)
+
+-ChestDistributions=(MinForceLevel=5,\\
+					MaxForceLevel=14,\\
+					ChestTypeShuffleBag[0]="Basic2", \\
+					RareChests[0]=(Type="RareCores", Chance=2.0), \\
+					RareChests[1]=(Type="RarePCS", Chance=2.0), \\
+					RareChests[2]=(Type="RareLoot", Chance=2.0), \\
+					)
+
+-ChestDistributions=(MinForceLevel=15,\\
+					MaxForceLevel=20,\\
+					ChestTypeShuffleBag[0]="Basic3", \\
+					RareChests[0]=(Type="RareCores", Chance=2.0), \\
+					RareChests[1]=(Type="RarePCS", Chance=2.0), \\
+					RareChests[2]=(Type="RareLoot", Chance=2.0), \\
+					)
+
++ChestDistributions=(MinForceLevel=1,\\
+					MaxForceLevel=4,\\
+					ChestTypeShuffleBag[0]="Basic1", \\
+					)
+
++ChestDistributions=(MinForceLevel=5,\\
+					MaxForceLevel=14,\\
+					ChestTypeShuffleBag[0]="Basic2", \\
+					)
+
++ChestDistributions=(MinForceLevel=15,\\
+					MaxForceLevel=20,\\
+					ChestTypeShuffleBag[0]="Basic3", \\
+					)

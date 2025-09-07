@@ -1,0 +1,20 @@
+NOTE: You must use Iridar's Weapon Skin Replacer to change the default attachments of the HK416D!
+
+IMPORTANT: Make sure that you copy this mod into your local mod directory, or else this will get overwritten and you will have to redo the process again!
+https://www.reddit.com/r/xcom2mods/wiki/wotc_modding/folder_paths#wiki_local_mods_folder.3A
+
+To get the OG HK 416 with proper upgrades:
+
+1) Go to the root folder of this mod, where you can see the following folders and files: 
+	./Config
+	./Content
+	./Localization
+	./Src
+	Readme.txt
+
+2) Unzip the file somewhere and drag the folder called Config into the root directory
+
+3) When asked, override all of the files.
+
+If you do override those files, then it should work. If you don't get such prompt, then something went wrong.
+

@@ -1,0 +1,64 @@
+[XComGame.XComGameState_HeadquartersAlien]
+-MinMissionsBetweenChosenAppearances[1]=3
+-MinMissionsBetweenChosenAppearances[2]=3
+-MinMissionsBetweenChosenAppearances[3]=3
+
++MinMissionsBetweenChosenAppearances[1]=0
++MinMissionsBetweenChosenAppearances[2]=0
++MinMissionsBetweenChosenAppearances[3]=0
+
+[XComGame.XComGameState_AdventChosen]
+-MaxMissionsToWaitBeforeAttack=3
++MaxMissionsToWaitBeforeAttack=6
+
+; Rookie
+-AppearChances=(Difficulty=0, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=0, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=0, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=0, MissionCount=4, PercentChance=100)
+; Veteran
+-AppearChances=(Difficulty=1, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=1, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=1, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=1, MissionCount=4, PercentChance=100)
+; Commander
+-AppearChances=(Difficulty=2, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=2, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=2, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=2, MissionCount=4, PercentChance=100)
+; Legend
+-AppearChances=(Difficulty=3, MissionCount=1, PercentChance=0)
+-AppearChances=(Difficulty=3, MissionCount=2, PercentChance=0)
+-AppearChances=(Difficulty=3, MissionCount=3, PercentChance=50)
+-AppearChances=(Difficulty=3, MissionCount=4, PercentChance=100)
+
+; UPDATED TABLES
+; Rookie
++AppearChances=(Difficulty=0, MissionCount=1, PercentChance=14)
++AppearChances=(Difficulty=0, MissionCount=2, PercentChance=17)
++AppearChances=(Difficulty=0, MissionCount=3, PercentChance=20)
++AppearChances=(Difficulty=0, MissionCount=4, PercentChance=25)
++AppearChances=(Difficulty=0, MissionCount=5, PercentChance=33)
++AppearChances=(Difficulty=0, MissionCount=6, PercentChance=50)
++AppearChances=(Difficulty=0, MissionCount=7, PercentChance=100)
+
+; Veteran
++AppearChances=(Difficulty=1, MissionCount=1, PercentChance=17)
++AppearChances=(Difficulty=1, MissionCount=2, PercentChance=20)
++AppearChances=(Difficulty=1, MissionCount=3, PercentChance=25)
++AppearChances=(Difficulty=1, MissionCount=4, PercentChance=33)
++AppearChances=(Difficulty=1, MissionCount=5, PercentChance=50)
++AppearChances=(Difficulty=1, MissionCount=6, PercentChance=100)
+
+; Commander
++AppearChances=(Difficulty=2, MissionCount=1, PercentChance=20)
++AppearChances=(Difficulty=2, MissionCount=2, PercentChance=25)
++AppearChances=(Difficulty=2, MissionCount=3, PercentChance=33)
++AppearChances=(Difficulty=2, MissionCount=4, PercentChance=50)
++AppearChances=(Difficulty=2, MissionCount=5, PercentChance=100)
+
+; Legend
++AppearChances=(Difficulty=3, MissionCount=1, PercentChance=25)
++AppearChances=(Difficulty=3, MissionCount=2, PercentChance=33)
++AppearChances=(Difficulty=3, MissionCount=3, PercentChance=50)
++AppearChances=(Difficulty=3, MissionCount=4, PercentChance=100)
